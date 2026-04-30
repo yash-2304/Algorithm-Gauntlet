@@ -857,7 +857,7 @@ export default function GridCanvas() {
         <div className="w-full lg:w-[300px] flex order-3 lg:order-none">
           <div className="flex-1 h-fit max-h-[250px] lg:max-h-none overflow-y-auto flex flex-col bg-gray-900 rounded-lg shadow-md border border-gray-800/50 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)] transition">
             <div className="flex-1">
-              <AlgoExplanationPanel logs={logs} steps={steps} winner={winner} compareAlgos={compareAlgos} />
+              <AlgoExplanationPanel logs={logs} steps={steps} winner={winner} />
             </div>
           </div>
         </div>
