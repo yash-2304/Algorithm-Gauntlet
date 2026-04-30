@@ -373,8 +373,8 @@ export default function GridCanvas() {
     setVisitedAStar(new Set());
     setPath(new Set());
     setWinner(null);
-    setSteps({ bfs: 0, dijkstra: 0, astar: 0 });
-    setGoalTimes({ bfs: null, dijkstra: null, astar: null });
+    setSteps({ bfs: 0, dijkstra: 0, astar: 0, dfs: 0, greedy: 0, bidirectional: 0 });
+    setGoalTimes({ bfs: null, dijkstra: null, astar: null, dfs: null, greedy: null, bidirectional: null });
 
     const start = grid[0][0];
     const goal = grid[grid.length - 1][grid[0].length - 1];
