@@ -408,6 +408,9 @@ export default function GridCanvas() {
         bfs: bfsGoal ?? bfsCount,
         dijkstra: dijGoal ?? dijCount,
         astar: astarGoal ?? astarCount,
+        dfs: 0,
+        greedy: 0,
+        bidirectional: 0,
       });
 
       if (bfsStep) {
@@ -431,7 +434,14 @@ export default function GridCanvas() {
         bfsGoal = bfsCount;
       }
 
-      setGoalTimes({ bfs: bfsGoal, dijkstra: dijGoal, astar: astarGoal });
+      setGoalTimes({
+        bfs: bfsGoal,
+        dijkstra: dijGoal,
+        astar: astarGoal,
+        dfs: null,
+        greedy: null,
+        bidirectional: null,
+      });
 
       // Winner = whoever reached goal first (based on local counters)
       if (!winner) {
