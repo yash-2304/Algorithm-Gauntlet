@@ -747,8 +747,8 @@ export default function GridCanvas() {
               gridTemplateColumns: `repeat(${grid[0].length}, minmax(14px, 1fr))`,
             }}
           >
-            {grid.map((row, i) =>
-              row.map((node, j) => {
+            {grid.map((row: any[], i: number) =>
+              row.map((node: any, j: number) => {
                 const key = `${i}-${j}`;
                 const isVisited = visited.has(key);
                 const isPath = path.has(key);
