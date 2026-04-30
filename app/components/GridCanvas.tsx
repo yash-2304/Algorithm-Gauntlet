@@ -337,7 +337,7 @@ export default function GridCanvas() {
 
       if (finished.length > 0) {
         const fastest = [...finished].sort((a, b) => a[1] - b[1])[0];
-        const cheapest = Object.entries(costCounts)
+        const cheapest = (Object.entries(costCounts) as [string, number][])
           .filter(([k]) => compareAlgos.includes(k))
           .sort((a, b) => a[1] - b[1])[0];
         setWinner(`${fastest[0].toUpperCase()} (fastest) | ${cheapest[0].toUpperCase()} (efficient)`);
